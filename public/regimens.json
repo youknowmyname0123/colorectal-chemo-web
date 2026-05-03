@@ -1,0 +1,195 @@
+{
+  "version": "大腸癌治療ガイドライン2024年版",
+  "source": "JSCCR（大腸癌研究会）",
+  "disclaimer": "本ツールは参照用です。最終的な治療判断は担当医が行ってください",
+
+  "adjuvant": {
+    "label": "術後補助化学療法（切除後 Stage II/III）",
+    "indication": "R0切除が行われたpStage III大腸癌、再発リスクの高いpStage II大腸癌",
+    "duration": "投与期間6カ月を原則とする",
+    "regimens": [
+      {
+        "name": "CAPOX",
+        "category": "OX併用療法",
+        "grade": "推奨",
+        "note": "Oxaliplatin + Capecitabine"
+      },
+      {
+        "name": "FOLFOX",
+        "category": "OX併用療法",
+        "grade": "推奨",
+        "note": "Oxaliplatin + 5-FU + l-LV（点滴）"
+      },
+      {
+        "name": "Capecitabine（Cape）",
+        "category": "フッ化ピリミジン単独",
+        "grade": "推奨",
+        "note": "OX不耐の場合など"
+      },
+      {
+        "name": "5-FU + l-LV",
+        "category": "フッ化ピリミジン単独",
+        "grade": "推奨",
+        "note": ""
+      },
+      {
+        "name": "UFT + LV",
+        "category": "フッ化ピリミジン単独",
+        "grade": "推奨",
+        "note": ""
+      },
+      {
+        "name": "S-1",
+        "category": "フッ化ピリミジン単独",
+        "grade": "推奨",
+        "note": ""
+      }
+    ]
+  },
+
+  "unresectable": {
+    "label": "切除不能進行・再発大腸癌に対する薬物療法",
+    "patient_classification": {
+      "fit": "全身状態良好（PS 0-1）、主要臓器機能保持、OX/IRI/分子標的薬の忍容性あり",
+      "vulnerable": "OX/IRI/分子標的薬の忍容性に問題あり（PS 2相当など）",
+      "frail": "全身状態不良（PS 3-4）または主要臓器機能障害→BSC（対症療法）"
+    },
+    "first_line": {
+      "label": "一次治療",
+      "msi_h_priority": {
+        "label": "MSI-H / dMMR 優先考慮",
+        "regimens": [
+          {
+            "name": "Pembrolizumab（Pembro）",
+            "grade": "推奨（MSI-H/dMMR またはTMB-H）",
+            "condition": "MSI-H/dMMR または TMB-H",
+            "note": "KEYNOTE-177試験に基づく。一次治療で化学療法より優先して考慮"
+          }
+        ]
+      },
+      "fit_doublet_bev": {
+        "label": "Fit患者：Doublet＋BEV（標準治療）",
+        "regimens": [
+          { "name": "FOLFOX + BEV", "grade": "推奨", "condition": "RAS問わず", "note": "" },
+          { "name": "CAPOX + BEV", "grade": "推奨", "condition": "RAS問わず", "note": "" },
+          { "name": "SOX + BEV", "grade": "推奨", "condition": "RAS問わず", "note": "" },
+          { "name": "FOLFIRI + BEV", "grade": "推奨", "condition": "RAS問わず", "note": "" },
+          { "name": "S-1 + IRI + BEV", "grade": "推奨", "condition": "RAS問わず", "note": "" }
+        ]
+      },
+      "fit_ras_wt_left": {
+        "label": "Fit患者 RAS野生型 + 左側原発（抗EGFR優先）",
+        "regimens": [
+          {
+            "name": "FOLFOX + CET または PANI",
+            "grade": "推奨（RAS野生型のみ）",
+            "condition": "RAS（KRAS/NRAS）野生型、左側原発",
+            "note": "PARADIGM試験等に基づく。左側・RAS野生型では抗EGFR薬＋Doubletを優先考慮"
+          },
+          {
+            "name": "FOLFIRI + CET または PANI",
+            "grade": "推奨（RAS野生型のみ）",
+            "condition": "RAS（KRAS/NRAS）野生型、左側原発",
+            "note": ""
+          }
+        ]
+      },
+      "fit_triplet": {
+        "label": "Fit患者：Triplet＋BEV（高強度）",
+        "regimens": [
+          {
+            "name": "FOLFOXIRI + BEV",
+            "grade": "推奨",
+            "condition": "十分な忍容性を有する患者（PS 0-1）",
+            "note": "TRIBE試験等。Conversion目的などで考慮"
+          }
+        ]
+      },
+      "vulnerable": {
+        "label": "Vulnerable患者（PS 2相当など）",
+        "regimens": [
+          { "name": "Infusional 5-FU + l-LV + BEV", "grade": "推奨", "condition": "", "note": "" },
+          { "name": "Capecitabine + BEV", "grade": "推奨", "condition": "", "note": "" },
+          { "name": "UFT + LV + BEV", "grade": "推奨", "condition": "", "note": "" },
+          { "name": "S-1 + BEV", "grade": "推奨", "condition": "", "note": "" },
+          {
+            "name": "CET または PANI（単剤）",
+            "grade": "推奨（RAS野生型のみ）",
+            "condition": "RAS（KRAS/NRAS）野生型",
+            "note": "抗癌薬不耐の高齢・虚弱患者"
+          }
+        ]
+      }
+    },
+    "second_line": {
+      "label": "二次治療",
+      "after_ox": {
+        "label": "OXを含むレジメンに不応・不耐となった場合",
+        "regimens": [
+          { "name": "FOLFIRI + BEV", "grade": "推奨", "condition": "", "note": "BEV継続（クロス）" },
+          { "name": "CAPIRI + BEV", "grade": "推奨", "condition": "", "note": "" },
+          { "name": "FOLFIRI + RAM（ramucirumab）", "grade": "推奨", "condition": "", "note": "RAISE試験" },
+          { "name": "FOLFIRI + AFL（aflibercept beta）", "grade": "推奨", "condition": "", "note": "" },
+          { "name": "S-1 + IRI + BEV", "grade": "推奨", "condition": "", "note": "" },
+          { "name": "IRI + BEV", "grade": "推奨", "condition": "", "note": "" },
+          { "name": "FOLFIRI + CET または PANI", "grade": "推奨（RAS野生型のみ）", "condition": "RAS野生型", "note": "" },
+          { "name": "CET または PANI + IRI", "grade": "推奨（RAS野生型のみ）", "condition": "RAS野生型", "note": "" },
+          { "name": "Pembrolizumab（Pembro）", "grade": "推奨（MSI-H/dMMR/TMB-Hのみ）", "condition": "MSI-H/dMMR または TMB-H", "note": "KEYNOTE-164試験" },
+          { "name": "Nivolumab（Nivo）", "grade": "推奨（MSI-Hのみ）", "condition": "MSI-H", "note": "CheckMate 142試験" },
+          { "name": "Ipilimumab + Nivolumab（Ipi+Nivo）", "grade": "推奨（MSI-Hのみ）", "condition": "MSI-H", "note": "" },
+          { "name": "Encorafenib + Cetuximab（ENCO+CET）", "grade": "推奨（BRAF V600E変異型のみ）", "condition": "BRAF V600E変異", "note": "" },
+          { "name": "Encorafenib + Binimetinib + Cetuximab（ENCO+BINI+CET）", "grade": "推奨（BRAF V600E変異型のみ）", "condition": "BRAF V600E変異", "note": "" },
+          { "name": "Entrectinib（ENTR）", "grade": "推奨（NTRK融合遺伝子陽性のみ）", "condition": "NTRK融合遺伝子陽性", "note": "" },
+          { "name": "Larotrectinib（LARO）", "grade": "推奨（NTRK融合遺伝子陽性のみ）", "condition": "NTRK融合遺伝子陽性", "note": "" }
+        ]
+      },
+      "after_iri": {
+        "label": "IRIを含むレジメンに不応・不耐となった場合",
+        "regimens": [
+          { "name": "FOLFOX + BEV", "grade": "推奨", "condition": "", "note": "" },
+          { "name": "CAPOX + BEV", "grade": "推奨", "condition": "", "note": "" },
+          { "name": "SOX + BEV", "grade": "推奨", "condition": "", "note": "" },
+          { "name": "FOLFOX + CET または PANI", "grade": "推奨（RAS野生型のみ）", "condition": "RAS野生型", "note": "" },
+          { "name": "Pembrolizumab（Pembro）", "grade": "推奨（MSI-H/dMMR/TMB-Hのみ）", "condition": "MSI-H/dMMR または TMB-H", "note": "" },
+          { "name": "Nivolumab（Nivo）", "grade": "推奨（MSI-Hのみ）", "condition": "MSI-H", "note": "" },
+          { "name": "Ipilimumab + Nivolumab（Ipi+Nivo）", "grade": "推奨（MSI-Hのみ）", "condition": "MSI-H", "note": "" },
+          { "name": "Encorafenib + Cetuximab（ENCO+CET）", "grade": "推奨（BRAF V600E変異型のみ）", "condition": "BRAF V600E変異", "note": "" },
+          { "name": "Encorafenib + Binimetinib + Cetuximab（ENCO+BINI+CET）", "grade": "推奨（BRAF V600E変異型のみ）", "condition": "BRAF V600E変異", "note": "" },
+          { "name": "Entrectinib（ENTR）", "grade": "推奨（NTRK融合遺伝子陽性のみ）", "condition": "NTRK融合遺伝子陽性", "note": "" },
+          { "name": "Larotrectinib（LARO）", "grade": "推奨（NTRK融合遺伝子陽性のみ）", "condition": "NTRK融合遺伝子陽性", "note": "" }
+        ]
+      }
+    },
+    "third_line_plus": {
+      "label": "三次治療以降（OX・IRI両方不応・不耐となった場合）",
+      "regimens": [
+        { "name": "CET または PANI ± IRI", "grade": "推奨（RAS野生型のみ）", "condition": "RAS野生型", "note": "CQ 24参照" },
+        { "name": "FTD/TPI（トリフルリジン/チピラシル）+ BEV", "grade": "推奨", "condition": "", "note": "CQ 24参照" },
+        { "name": "FTD/TPI（トリフルリジン/チピラシル）単剤", "grade": "推奨", "condition": "", "note": "" },
+        { "name": "Regorafenib（REG）", "grade": "推奨", "condition": "", "note": "" },
+        { "name": "Pembrolizumab（Pembro）", "grade": "推奨（MSI-H/dMMR/TMB-Hのみ）", "condition": "MSI-H/dMMR または TMB-H", "note": "" },
+        { "name": "Nivolumab（Nivo）", "grade": "推奨（MSI-Hのみ）", "condition": "MSI-H", "note": "" },
+        { "name": "Ipilimumab + Nivolumab（Ipi+Nivo）", "grade": "推奨（MSI-Hのみ）", "condition": "MSI-H", "note": "" },
+        { "name": "Encorafenib + Cetuximab（ENCO+CET）", "grade": "推奨（BRAF V600E変異型のみ）", "condition": "BRAF V600E変異", "note": "" },
+        { "name": "Encorafenib + Binimetinib + Cetuximab（ENCO+BINI+CET）", "grade": "推奨（BRAF V600E変異型のみ）", "condition": "BRAF V600E変異", "note": "" },
+        { "name": "Pertuzumab + Trastuzumab（PER+TRA）", "grade": "推奨（HER2陽性のみ）", "condition": "HER2陽性", "note": "コメント⑤参照" },
+        { "name": "Entrectinib（ENTR）", "grade": "推奨（NTRK融合遺伝子陽性のみ）", "condition": "NTRK融合遺伝子陽性", "note": "" },
+        { "name": "Larotrectinib（LARO）", "grade": "推奨（NTRK融合遺伝子陽性のみ）", "condition": "NTRK融合遺伝子陽性", "note": "" }
+      ]
+    }
+  },
+
+  "notes": {
+    "tumor_location": {
+      "left": "下行結腸、S状結腸、直腸",
+      "right": "盲腸、上行結腸、横行結腸"
+    },
+    "doublet": "FOLFOX, CAPOX, SOX, FOLFIRI, S-1+IRI",
+    "triplet": "FOLFOXIRI",
+    "fluoropyrimidine": "5-FU+l-LV、UFT+LV、S-1、Cape",
+    "ras_test": "RAS（KRAS/NRAS）遺伝子検査を一次治療前に実施",
+    "braf_test": "BRAF V600E遺伝子検査を一次治療前に実施",
+    "msi_test": "MSI/MMR-IHC検査を一次治療前に実施",
+    "her2_test": "HER2検査も考慮（コメント⑤参照）"
+  }
+}
